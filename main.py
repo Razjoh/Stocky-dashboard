@@ -30,6 +30,8 @@ df_dict = {symbol: stockdata_object.stock_dataframe(symbol) for symbol in symbol
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY], 
 meta_tags=[dict(name="viewport", content="width=device-width, initial-scale=1.0")])
 
+server = app.server
+
 app.layout = Layout(symbol_dict).layout()
 
 
